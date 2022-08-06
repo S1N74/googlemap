@@ -1,0 +1,111 @@
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.header {
+    background: transparent;
+    height:80px;
+    opacity: 1;
+}
+
+.header-container{
+    display:flex;
+    justify-content:space-between ;
+    height: 80px;
+    align-items: center;
+}
+
+.logo a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 2rem;
+    padding:0 40px;
+}
+
+.menu{
+    display: flex;
+    list-style-type: none;
+    margin-top: 50px;
+}
+
+.menu li{
+    padding-right: 2rem;
+}
+.menu li a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 400;
+}
+
+
+.header-btn-login  {
+    background: transparent;
+    display: flex;
+    text-decoration: none;
+    color:#333;
+    border: 1px solid transparent;
+    transition: 0.3s;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    text-transform: uppercase;
+    padding: 2px 40px;
+}
+.header-btn-login:hover {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    text-decoration:underline;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media screen and (max-width:480px){
+    .mobile-menu{
+        display: block;
+    }
+
+    .header {
+            padding: 0 2 rem;
+    }
+
+    .menu{
+        width: 100%;
+        height: auto;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        top: 64px;
+        right: -100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        
+    }
+
+    .menu.active{
+        background:#111 ;
+        right: 0;
+        opacity: 1;
+        z-index:1 ;
+        padding-right: 0;
+        align-content: center;
+        transition: 0.5s ease;
+    }
+    .menu li{
+        padding-right: 0;
+    }
+
+    .menu-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height:10vw ;
+        padding: 10px 0;
+    }
+
+}
